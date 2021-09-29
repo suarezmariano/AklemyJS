@@ -212,6 +212,62 @@ header .log p:hover {
     padding: .5rem 0;
 }
 
+footer{
+    position:fixed;
+    bottom: 0; left: 0; right: 0;
+    background: #333;
+    padding: .5rem 9%;
+}
+  
+footer .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap:1.5rem;
+}
+
+footer .box-container .box{
+    padding: .5rem 0;
+    flex:1 1 25rem;
+}
+  
+footer .box-container .box h3{
+    font-size: 2.5rem;
+    padding: .5rem 0;
+    color:#fff;
+}
+  
+footer .box-container .box p{
+    font-size: 1.5rem;
+    padding: .5rem 0;
+    color:#eee;
+}
+  
+footer .box-container .box a{
+   display: inline-block;
+   font-size: 1.5rem;
+   margin-right: 2rem;
+   padding: .5rem 0;
+   color:#eee;
+}
+  
+.footer .box-container .box a:hover{
+    color:var(--orange);
+    text-decoration: underline;
+}
+
+footer .credit{
+    text-align: center;
+    padding: 1.5rem 1rem;
+    margin-top: 1rem;
+    font-size: 2rem;
+    font-weight: normal;
+    color:#fff;
+    border-top: .1rem solid rgba(255,255,255,.2);
+}
+  
+footer .credit span{
+    color:var(--orange);
+}
 
 /* media queries */
 
@@ -232,10 +288,16 @@ header .log p:hover {
 }
 
 
-@media (max-width: 450px){
+@media (max-width: 511px){
 
     html {
         font-size: 50%;
     }
+
+    header .log p {
+        display: none;
+        
+    }
+
 
 }
