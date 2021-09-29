@@ -185,8 +185,7 @@ header .log p:hover {
 }
 
 .home .content {
-    text-align: center;
-    
+    text-align: center;    
 }
 
 .home .content img {
@@ -210,6 +209,10 @@ header .log p:hover {
     color: #fff;
     text-transform: uppercase;
     padding: .5rem 0;
+}
+
+.error {
+    text-align: center;
 }
 
 footer{
@@ -293,6 +296,8 @@ footer .credit span{
     html {
         font-size: 50%;
     }
+
+
 
     header .log p {
         display: none;
