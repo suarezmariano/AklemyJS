@@ -185,7 +185,8 @@ header .log p:hover {
 }
 
 .home .content {
-    text-align: center;    
+    text-align: center;
+
 }
 
 .home .content img {
@@ -276,11 +277,7 @@ footer .credit span{
     background-color: bisque;
     display: block;
     opacity: .5;
-    max-width: 75%;
-    max-height:30%;
     padding: 2rem;
-    
-
 }
 
 .resume-container h2{
@@ -317,6 +314,11 @@ footer .credit span{
 
     header .log p {
         display: none;
+    }
+
+    .home .content {
+        
+        margin-bottom: 100px;    
     }
 
 
