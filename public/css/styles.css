@@ -272,6 +272,24 @@ footer .credit span{
     color:var(--orange);
 }
 
+.resume-container{
+    background-color: bisque;
+    display: block;
+    opacity: .5;
+    max-width: 75%;
+    max-height:30%;
+    padding: 2rem;
+    
+
+}
+
+.resume-container h2{
+    font-size: 2rem;
+    color: black;
+    text-align: left;   
+
+}
+
 /* media queries */
 
 @media (max-width: 1200px){
@@ -297,11 +315,8 @@ footer .credit span{
         font-size: 50%;
     }
 
-
-
     header .log p {
         display: none;
-        
     }
 
 
