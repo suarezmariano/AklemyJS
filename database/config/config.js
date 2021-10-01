@@ -1,9 +1,9 @@
 module.exports = {
   "development": {
-    "username": "root",
-    "password": null,
+    "username": "b560cf5dd55e60",
+    "password": 9c1ad99e,
     "database": "misgastos",
-    "host": "127.0.0.1",
+    "host": "us-cdbr-east-04.cleardb.com",
     "dialect": "mysql"
   },
   "test": {
