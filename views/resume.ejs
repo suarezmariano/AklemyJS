@@ -7,40 +7,21 @@
 
     <%- include("./partials/header.ejs") %>
             
-<!-- Login form container starts here -->
-<div class="login-form-container"> 
+    <section class="home" id="home">
 
-    <i class="fas fa-times" id="form-close"></i>
+        <div class="content">
+            <img src="/images/background.jpg">
+            <div class="resume-container">
+                <h2>Mi Dinero: </h2>
 
-    <form action="">
-        <h3>Login</h3>
-        <input type="email" class="box" placeholder="Ingrese su correo electrónico">
-        <input type="password" class="box" placeholder="Ingrese su contraseña">
-        <input type="submit" value="Ingresar" class="btn">
-        <input type="checkbox" id="remember">
-        <label for="remember">Recordar Contraseña</label>
-        <p>Olvidó su contraseña?<a href="#"> Resetear Contraseña</a></p>
-        <p>No tiene cuenta?<a href="#"> Registrarse</a></p>
-    </form>
+                <a href="./new" class="btn">Ingresar Movimiento</a>
 
-</div>
-<!-- Login form container ends here -->
+            </div>
+        </div>        
 
-<!-- home section starts here-->
-<section class="home" id="home">
+    </section>
 
-    <div class="content">
-        <img src="/images/background.jpg">
-        <div class="resume-container">
-            <h2>Mi Dinero: </h2>
-
-        </div>
-    </div>        
-
-</section>
-
-
-<%- include("./partials/footer.ejs") %>
+    <%- include("./partials/footer.ejs") %>
 
 </body>
 </html>

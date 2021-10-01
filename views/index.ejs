@@ -6,40 +6,20 @@
 <body>
 
     <%- include("./partials/header.ejs") %>
-            
-<!-- Login form container starts here -->
-<div class="login-form-container"> 
 
-    <i class="fas fa-times" id="form-close"></i>
+    <section class="home" id="home">
 
-    <form action="">
-        <h3>Login</h3>
-        <input type="email" class="box" placeholder="Ingrese su correo electrónico">
-        <input type="password" class="box" placeholder="Ingrese su contraseña">
-        <input type="submit" value="Ingresar" class="btn">
-        <input type="checkbox" id="remember">
-        <label for="remember">Recordar Contraseña</label>
-        <p>Olvidó su contraseña?<a href="#"> Resetear Contraseña</a></p>
-        <p>No tiene cuenta?<a href="#"> Registrarse</a></p>
-    </form>
+        <div class="content">
+            <img src="/images/background.jpg">
+            <h3>Comenzá a administrar tus finanzas</h3>
+            <p>Y lográ la libertad financiera</p>
+            <a href="./resume" class="btn">Empieza ahora</a>
+        </div>        
 
-</div>
-<!-- Login form container ends here -->
-
-<!-- home section starts here-->
-<section class="home" id="home">
-
-    <div class="content">
-        <img src="/images/background.jpg">
-        <h3>Comenzá a administrar tus finanzas</h3>
-        <p>Y lográ la libertad financiera</p>
-        <a href="./resume" class="btn">Empieza ahora</a>
-    </div>        
-
-</section>
+    </section>
 
 
-<%- include("./partials/footer.ejs") %>
+    <%- include("./partials/footer.ejs") %>
 
 </body>
 </html>

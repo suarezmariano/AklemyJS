@@ -4,6 +4,9 @@ const indexController = {
     },
     resume: function (req, res) {
       return res.render("resume");
+    },
+    new: function (req, res) {
+      return res.render("new");
     }
   };
   

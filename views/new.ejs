@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <%- include("./partials/head.ejs") %>
+
+<body>
+
+    <%- include("./partials/header.ejs") %>
+            
+    <section class="home" id="home">
+
+        <div class="content">
+            <img src="/images/background.jpg">
+            <div class="resume-container">
+                <h2>Mi Dinero: </h2>
+                <form method="POST" action="/new" enctype="multipart/form-data" id="new">
+
+                    <div>
+                        <label for="type">Tipo de Movimiento</label>
+                        <select name="type" id="type">
+                            <option disabled selected>Seleccionar</option>
+                            <option>Ingreso</option>
+                            <option>Egreso</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="date">Fecha</label>
+                        <input type="date" name="date" id="date">
+                    </div>
+
+                    <div>
+                        <label for="amount">Monto</label>
+                        <input type="amount" name="amount" id="amount">
+                    </div>
+
+                    <div>
+                        <label for="concept">Concepto</label>
+                        <select name="concept" id="concept">
+                            <option disabled selected>Seleccionar</option>
+                            <option>Sueldo</option>
+                            <option>Otro Ingreso</option>
+                            <option>Combustible</option>
+                            <option>Supermercado</option>
+                            <option>Pago de Servicios</option>
+                            <option>Pago de Tarjeta de Credito</option>
+                            <option>Otro</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="comment">Comentario</label>
+                        <textarea
+                            name="comment"
+                            id="comment"
+                            cols="25"
+                            rows="4"
+                            maxlength="75"
+                            placeholder="Comentario (opcional)">
+                        </textarea>
+                    </div>
+
+                </form>
+
+                <a href="./resume" class="btn">Ingresar</a>
+                <a href="./resume" class="btn">Cancelar</a>
+
+            </div>
+        </div>        
+
+    </section>
+
+
+    <%- include("./partials/footer.ejs") %>
+
+</body>
+</html>
