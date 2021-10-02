@@ -13,11 +13,11 @@
             <img src="/images/background.jpg">
             <div class="resume-container">
                 <h2>Mi Dinero: </h2>
-                <form method="POST" action="/new" enctype="multipart/form-data" id="new">
+                <form method="POST" action="/new" id="new">
 
                     <div>
-                        <label for="type">Tipo de Movimiento</label>
-                        <select name="type" id="type">
+                        <label for="movement_type">Tipo de Movimiento</label>
+                        <select name="movement_type" id="movement_type">
                             <option disabled selected>Seleccionar</option>
                             <option>Ingreso</option>
                             <option>Egreso</option>
@@ -55,15 +55,14 @@
                             id="comment"
                             cols="25"
                             rows="4"
-                            maxlength="75"
-                            placeholder="Comentario (opcional)">
+                            maxlength="75">
                         </textarea>
                     </div>
-
+                    <button type="submit" class="btn">Ingresar</button>
+                    <a href="./resume" class="btn">Cancelar</a>
                 </form>
 
-                <a href="./resume" class="btn">Ingresar</a>
-                <a href="./resume" class="btn">Cancelar</a>
+                
 
             </div>
         </div>        

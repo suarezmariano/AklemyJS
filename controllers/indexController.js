@@ -1,3 +1,5 @@
+const db = require("../database/models/index");
+
 const indexController = {
     index: function (req, res) {
       return res.render("index");
@@ -7,9 +9,18 @@ const indexController = {
     },
     new: function (req, res) {
       return res.render("new");
-    }
+    },
     save: function (req, res) {
-      return res.render("new");
+      
+      db.Movement.create({
+        movement_type: req.body.movement_type,
+        date: req.body.date,
+        amount: req.body.amount,
+        concept: req.body.concept,
+        comment: req.body.comment,
+      })
+
+      return res.redirect("resume");
     }
   };
   

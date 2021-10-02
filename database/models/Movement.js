@@ -1,5 +1,3 @@
-const { DataTypes } = require("sequelize/types");
-
 module.exports = function (sequelize,dataTypes) {
 
     let alias = "Movement";
@@ -10,7 +8,7 @@ module.exports = function (sequelize,dataTypes) {
             primaryKey: true,
             autoIncrement: true
         },
-        type: {
+        movement_type: {
             type: dataTypes.STRING(45)
         },
         date: {
@@ -24,17 +22,12 @@ module.exports = function (sequelize,dataTypes) {
         },
         comment: {
             type: dataTypes.STRING(75)
-        },
-        createdAt: {
-            type: DataTypes.DATE
-        },
-        updatedAt: {
-            type: DataTypes.DATE
         }
     }
 
     let config = {
         tablename: "movements",
+        timestamps: false
     }
 
     const Movement = sequelize.define(alias, cols, config);
