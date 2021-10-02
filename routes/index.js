@@ -4,6 +4,9 @@ const indexController = require("../controllers/indexController");
 
 router.get("/", indexController.index);
 router.get("/resume", indexController.resume);
+
+// new movement
 router.get("/new", indexController.new);
+router.post("/new", indexController.save);
 
 module.exports = router;

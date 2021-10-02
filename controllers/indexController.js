@@ -8,6 +8,9 @@ const indexController = {
     new: function (req, res) {
       return res.render("new");
     }
+    save: function (req, res) {
+      return res.render("new");
+    }
   };
   
   module.exports = indexController;
