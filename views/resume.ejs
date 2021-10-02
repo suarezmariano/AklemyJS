@@ -14,7 +14,42 @@
             <div class="resume-container">
                 <h2>Mi Dinero: </h2>
 
+                
+
+                    <table id="table">
+                        <tr>
+                            <th>Tipo</th>
+                            <th>Fecha</th>
+                            <th>Monto($)</th>
+                            <th>Concepto</th>
+                            <th>Comentario</th>
+                            <th>Modificar</th>
+                            <th>Eliminar</th>
+                        </tr>
+
+                        <% for (let i = 0; i< movements.length; i++) { %>
+                        
+                            <tr>
+                                <th><%= movements[i].movement_type %></th>
+                                <th><%= movements[i].date %></th>
+                                <th><%= movements[i].amount %></th>
+                                <th><%= movements[i].concept %></th>
+                                <th><%= movements[i].comment %></th>
+                                <th><a href="/admin/products/edit/<%= movements[i].id_movement %>">M</a></th>
+                                <th><a href="./delete">X</a></th>
+                            </tr>
+
+                        <% } %>
+
+                    </table>
+
+                </div>
+
+
                 <a href="./new" class="btn">Ingresar Movimiento</a>
+                <a href="/" class="btn">Salir</a>
+
+            
 
             </div>
         </div>        

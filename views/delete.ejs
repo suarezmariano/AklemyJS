@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <%- include("./partials/head.ejs") %>
+
+<body>
+
+    <%- include("./partials/header.ejs") %>
+            
+    <section class="home" id="home">
+
+        <div class="content">
+            <img src="/images/background.jpg">
+            <div class="resume-container">
+                <h2>Desea eliminar el momiviento?  </h2>
+
+                <form method="DELETE" action="/delete" id="delete">
+                    <button type="submit" class="btn">Eliminar</button>
+                    <a href="./resume" class="btn">Cancelar</a>     
+                </form>
+                        
+
+            </div>
+        </div>        
+
+    </section>
+
+    <%- include("./partials/footer.ejs") %>
+
+</body>
+</html>

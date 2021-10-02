@@ -18,7 +18,7 @@ module.exports = function (sequelize,dataTypes) {
             type: dataTypes.INTEGER(11)
         },
         concept: {
-            type: dataTypes.STRING(16)
+            type: dataTypes.STRING(75)
         },
         comment: {
             type: dataTypes.STRING(75)

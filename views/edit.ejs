@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <%- include("./partials/head.ejs") %>
+
+<body>
+
+    <%- include("./partials/header.ejs") %>
+            
+    <section class="home" id="home">
+
+        <div class="content">
+            <img src="/images/background.jpg">
+            <div class="resume-container">
+                <h2>Mi Dinero: </h2>
+                <form method="POST" action="/edit/<%= movementDetail.id_movement %>?_method=PUT" id="saveModification">
+
+                    <div>
+                        <label for="movement_type">Tipo de Movimiento</label>
+                        <select name="movement_type" id="movement_type">
+                            <option ><%= movementDetail.movement_type %></option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="date">Fecha</label>
+                        <input type="date" name="date" id="date" value="<%= movementDetail.date%>">
+                    </div>
+
+                    <div>
+                        <label for="amount">Monto</label>
+                        <input type="amount" name="amount" id="amount" value="<%= movementDetail.amount %>">
+                    </div>
+
+                    <div>
+                        <label for="concept">Concepto</label>
+                        <select name="concept" id="concept">
+                            <option selected><%= movementDetail.concept %></option>
+                            <option>Sueldo</option>
+                            <option>Otro Ingreso</option>
+                            <option>Combustible</option>
+                            <option>Supermercado</option>
+                            <option>Pago de Servicios</option>
+                            <option>Pago de Tarjeta de Credito</option>
+                            <option>Otro</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="comment">Comentario</label>
+                        <textarea
+                            name="comment"
+                            id="comment"
+                            cols="25"
+                            rows="4"
+                            maxlength="75">
+                            <%= movementDetail.comment %>
+                        </textarea>
+                    </div>
+                    <button type="submit" class="btn">Guardar Cambios</button>
+                    <a href="./resume" class="btn">Cancelar</a>
+                </form>
+
+                
+
+            </div>
+        </div>        
+
+    </section>
+
+
+    <%- include("./partials/footer.ejs") %>
+
+</body>
+</html>
