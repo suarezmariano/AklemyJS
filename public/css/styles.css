@@ -105,6 +105,7 @@ header .log p:hover {
 
 .home .content {
     text-align: center;
+    
 }
 
 .home .content img {
@@ -135,7 +136,7 @@ header .log p:hover {
 }
 
 footer{
-    position:fixed;
+    position: fixed;
     bottom: 0; left: 0; right: 0;
     background: #333;
     padding: .5rem 9%;
@@ -242,8 +243,11 @@ footer .credit span{
     }
 
     .home .content {
-        
         margin-bottom: 100px;    
+    }
+
+    footer{
+        position: relative;
     }
 
 
