@@ -25,17 +25,17 @@
 
                     <div>
                         <label for="date">Fecha</label>
-                        <input type="date" name="date" id="date" value="<%= movementDetail.date%>">
+                        <input required type="date" name="date" id="date" value="<%= movementDetail.date%>">
                     </div>
 
                     <div>
                         <label for="amount">Monto</label>
-                        <input type="amount" name="amount" id="amount" value="<%= movementDetail.amount %>">
+                        <input required type="amount" name="amount" id="amount" value="<%= movementDetail.amount %>">
                     </div>
 
                     <div>
                         <label for="concept">Concepto</label>
-                        <select name="concept" id="concept">
+                        <select required name="concept" id="concept">
                             <option selected><%= movementDetail.concept %></option>
                             <option>Sueldo</option>
                             <option>Otro Ingreso</option>
@@ -54,9 +54,7 @@
                             id="comment"
                             cols="25"
                             rows="4"
-                            maxlength="75">
-                            <%= movementDetail.comment %>
-                        </textarea>
+                            maxlength="75"><%= movementDetail.comment %></textarea>
                     </div>
                     <button type="submit" class="btn">Guardar Cambios</button>
                     <a href="../resume" class="btn">Cancelar</a>

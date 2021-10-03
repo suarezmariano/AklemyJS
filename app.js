@@ -28,8 +28,10 @@ app.use(express.urlencoded({ extended: false }));
 
 // routes
 const indexRouter = require("./routes/index");
+const apiRouter = require("./routes/apis");
 
 app.use("/", indexRouter);
+app.use("/movements", apiRouter);
 
 // page not found
 app.use((req, res, next) => {

@@ -18,7 +18,7 @@
                     <div>
                         <label for="movement_type">Tipo de Movimiento</label>
                         <select name="movement_type" id="movement_type">
-                            <option disabled selected>Seleccionar</option>
+                            <option required disabled selected>Seleccionar</option>
                             <option>Ingreso</option>
                             <option>Egreso</option>
                         </select>
@@ -26,17 +26,17 @@
 
                     <div>
                         <label for="date">Fecha</label>
-                        <input type="date" name="date" id="date">
+                        <input required type="date" name="date" id="date">
                     </div>
 
                     <div>
                         <label for="amount">Monto</label>
-                        <input type="amount" name="amount" id="amount">
+                        <input required type="amount" name="amount" id="amount">
                     </div>
 
                     <div>
                         <label for="concept">Concepto</label>
-                        <select name="concept" id="concept">
+                        <select required name="concept" id="concept">
                             <option disabled selected>Seleccionar</option>
                             <option>Sueldo</option>
                             <option>Otro Ingreso</option>
@@ -55,8 +55,7 @@
                             id="comment"
                             cols="25"
                             rows="4"
-                            maxlength="75">
-                        </textarea>
+                            maxlength="75"></textarea>
                     </div>
                     <button type="submit" class="btn">Ingresar</button>
                     <a href="./resume" class="btn">Cancelar</a>
