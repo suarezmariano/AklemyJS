@@ -31,7 +31,7 @@ CREATE TABLE `movements` (
   `comment` varchar(75) DEFAULT NULL,
   PRIMARY KEY (`id_movement`),
   UNIQUE KEY `id_movement_UNIQUE` (`id_movement`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -40,7 +40,7 @@ CREATE TABLE `movements` (
 
 LOCK TABLES `movements` WRITE;
 /*!40000 ALTER TABLE `movements` DISABLE KEYS */;
-INSERT INTO `movements` VALUES (2,'Egreso','2021-09-29',234234,'Otro Ingreso','                2sdfsdfsf        '),(3,'Egreso','2021-10-02',11111,'Pago de Tarjeta de Credito','                 sdfdsfsd      '),(4,'Egreso','2021-10-02',2222,'Pago de Tarjeta de Credito','                        '),(5,'Ingreso','2021-10-02',333,'Sueldo','                      sdfs  '),(6,'Ingreso','2021-09-30',666,'Sueldo','       qqq                 '),(7,'Egreso','2021-10-03',999,'Supermercado','                        ');
+INSERT INTO `movements` VALUES (12,'Egreso','2021-09-29',345345,'Supermercado','Comida'),(13,'Ingreso','2021-09-26',1000000,'Sueldo',''),(14,'Ingreso','2021-08-25',2222,'Otro Ingreso','Prestamo a Juan'),(15,'Egreso','2021-10-14',54343,'Pago de Servicios','Gas Natural');
 /*!40000 ALTER TABLE `movements` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -53,4 +53,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-10-03 10:13:25
+-- Dump completed on 2021-10-03 20:22:38
