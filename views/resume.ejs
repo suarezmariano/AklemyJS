@@ -35,8 +35,8 @@
                                 <th><%= movements[i].amount %></th>
                                 <th><%= movements[i].concept %></th>
                                 <th><%= movements[i].comment %></th>
-                                <th><a href="/admin/products/edit/<%= movements[i].id_movement %>">M</a></th>
-                                <th><a href="./delete">X</a></th>
+                                <th><a href="/edit/<%= movements[i].id_movement %>">M</a></th>
+                                <th><a href="/delete/<%= movements[i].id_movement %>">X</a></th>
                             </tr>
 
                         <% } %>

@@ -14,7 +14,33 @@
             <div class="resume-container">
                 <h2>Desea eliminar el momiviento?  </h2>
 
-                <form method="DELETE" action="/delete" id="delete">
+                <form method="POST" action="/delete/<%= movementDetail.id_movement %>?_method=DELETE" id="delete">
+
+                    <div class="resume-container">
+                        <h2>Mi Dinero: </h2>                           
+        
+                            <table id="table">
+                                <tr>
+                                    <th>Tipo</th>
+                                    <th>Fecha</th>
+                                    <th>Monto($)</th>
+                                    <th>Concepto</th>
+                                    <th>Comentario</th>
+                                </tr>
+                                       
+                                    <tr>
+                                        <th><%= movementDetail.movement_type %></th>
+                                        <th><%= movementDetail.date %></th>
+                                        <th><%= movementDetail.amount %></th>
+                                        <th><%= movementDetail.concept %></th>
+                                        <th><%= movementDetail.comment %></th>
+                                    </tr>
+        
+                            </table>
+        
+                        </div>
+        
+
                     <button type="submit" class="btn">Eliminar</button>
                     <a href="./resume" class="btn">Cancelar</a>     
                 </form>

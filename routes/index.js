@@ -2,21 +2,21 @@ const express = require("express");
 const router = express.Router();
 const indexController = require("../controllers/indexController");
 
-router.get("/", indexController.index);
+router.get("/", indexController.index); //FUNCIONA
 
-router.get("/resume", indexController.list);
+router.get("/resume", indexController.list); //FUNCIONA
 
 // new movement
-router.get("/new", indexController.new);
-router.post("/new", indexController.saveMovement);
+router.get("/new", indexController.new); //FUNCIONA
+router.post("/new", indexController.save); //FUNCIONA
 
 // edit movement
-router.get("/edit", indexController.edit);
+router.get("/edit/:idMovement", indexController.edit);//FUNCIONA
 router.post("/edit/:idMovement", indexController.saveModification);
 
 // delete movement
-router.get("/delete", indexController.delete);
-router.delete("/delete", indexController.deleteMovement);
+router.get("/delete/:idMovement", indexController.delete);//FUNCIONA
+router.delete("/delete/:idMovement", indexController.deleteMovement);
 
 
 module.exports = router;

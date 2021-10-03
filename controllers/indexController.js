@@ -4,13 +4,22 @@ const indexController = {
     index: function (req, res) {
       return res.render("index");
     },
+
     new: function (req, res) {
       return res.render("new");
     },
-    saveMovement: function (req, res) {
-      db.Movement.findByPk(req.params.idMovement).then(function (movementDetail) {
-        return res.render("./edit", { movementDetail: movementDetail });
-      });
+
+    save: function (req, res) {
+
+      db.Movement.create({
+        movement_type: req.body.movement_type,
+        date: req.body.date,
+        amount: req.body.amount,
+        concept: req.body.concept,
+        comment: req.body.comment,
+      })
+
+      return res.redirect("resume");
     },
 
     list: function (req, res) {
@@ -20,27 +29,35 @@ const indexController = {
     },
 
     edit: function (req, res) {
-      return res.render("edit");
+      db.Movement.findByPk(req.params.idMovement).then(function (movementDetail) {
+        return res.render("./edit", { movementDetail: movementDetail });
+      });
     },
 
     saveModification: function (req, res) {
+
       db.Movement.update({
         date: req.body.date,
         amount: req.body.amount,
         concept: req.body.concept,
         comment: req.body.comment,
-      }, { where: {id_movement = req.params.idMovement}});
+      }, { where: {id_movement: req.params.idMovement}});
+
+      return res.redirect("resume");
+
     },
 
     delete: function (req, res) {
-      return res.render("delete");
+      db.Movement.findByPk(req.params.idMovement).then(function (movementDetail) {
+        return res.render("./delete", { movementDetail: movementDetail });
+      });
     },
     
     deleteMovement: function (req, res) {
 
       db.Movement.destroy({
-        
-      })
+        where: {id_movement: req.params.idMovement },
+      });
 
       return res.redirect("resume");      
     }
