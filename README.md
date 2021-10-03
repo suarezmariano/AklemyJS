@@ -9,6 +9,10 @@ operaciones registradas.
 
 Se utliizó el framwork Express y una base de datos relacional en MySQL.
 
+No se llegó a terminar:
+Las APIS fueron creadas pero no son consumidas para su operación.
+La parte de Autentificacion de Usuarios se empezó pero no logré terminarlo a tiempo. 
+La validadcion de los formularios en el front y en el back no llegué a implementarlo. 
 
 -------------------------------------------------------
 ## Instrucciones para ejecutarlo:
