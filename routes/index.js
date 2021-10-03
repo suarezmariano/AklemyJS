@@ -23,5 +23,4 @@ router.delete("/delete/:idMovement", indexController.deleteMovement);
 // login
 router.get("/login", indexController.login);
 
-
 module.exports = router;

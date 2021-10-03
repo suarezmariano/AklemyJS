@@ -15,9 +15,9 @@ router.post("/", apiController.create);
 router.delete("/:idMovement", apiController.delete)
 
 // modify a movement
-router.put("/:idMovement", apiController.modify) // NO FUNCIONA
+router.put("/:idMovement", apiController.modify)
 
 // search a movement
-router.get("/search", apiController.search); // NO FUNCIONA
+router.get("/search", apiController.search);
 
 module.exports = router;

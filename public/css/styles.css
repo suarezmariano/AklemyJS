@@ -41,7 +41,7 @@ section {
     font-size: 1.7rem;
 }
 
-.btn:hover {
+.btn:hover, .btn-close:hover {
     background: rgba(255,165,0,.2);
     color: var(--orange);
 }
@@ -247,7 +247,7 @@ td, th {
 
 .login-form-container form{
     margin: 2rem;
-    padding: 1.5rem 2rem;
+    padding: 1rem 2rem;
     border-radius: .5rem;
     background-color: bisque;
     opacity: .9;
@@ -264,7 +264,6 @@ td, th {
 
 .login-form-container .box{
     width: 100%;
-    padding: 1rem;
     font-size: 1.7rem;
     color: #333;
     margin: .6rem 0;
@@ -288,6 +287,12 @@ td, th {
     width: 100%;
 }
 
+.login-form-container form .btn-close {
+    display: flex;
+    justify-content: center;
+    width: 20%;
+}
+
 .login-form-container form h1{
     color: var(--orange);
 }
@@ -295,12 +300,6 @@ td, th {
 .login-form-container form h1 a:hover {
     color: #333;
     text-decoration: underline;
-}
-
-.login-form-container #form-close {
-    display: flex;
-    flex-direction: row-reverse;
-    cursor: pointer;
 }
 
 

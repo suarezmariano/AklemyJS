@@ -12,56 +12,58 @@
         <div class="content">
             <img src="/images/background.jpg">
             <div class="resume-container">
-                <h2>Mi Dinero: </h2>
-                <form method="POST" action="/new" id="new">
-
-                    <div>
-                        <label for="movement_type">Tipo de Movimiento</label>
-                        <select name="movement_type" id="movement_type">
-                            <option required disabled selected>Seleccionar</option>
-                            <option>Ingreso</option>
-                            <option>Egreso</option>
-                        </select>
-                    </div>
-
-                    <div>
-                        <label for="date">Fecha</label>
-                        <input required type="date" name="date" id="date">
-                    </div>
-
-                    <div>
-                        <label for="amount">Monto</label>
-                        <input required type="amount" name="amount" id="amount">
-                    </div>
-
-                    <div>
-                        <label for="concept">Concepto</label>
-                        <select required name="concept" id="concept">
-                            <option disabled selected>Seleccionar</option>
-                            <option>Sueldo</option>
-                            <option>Otro Ingreso</option>
-                            <option>Combustible</option>
-                            <option>Supermercado</option>
-                            <option>Pago de Servicios</option>
-                            <option>Pago de Tarjeta de Credito</option>
-                            <option>Otro</option>
-                        </select>
-                    </div>
-
-                    <div>
-                        <label for="comment">Comentario</label>
-                        <textarea
-                            name="comment"
-                            id="comment"
-                            cols="25"
-                            rows="4"
-                            maxlength="75"></textarea>
-                    </div>
-                    <button type="submit" class="btn">Ingresar</button>
-                    <a href="./resume" class="btn">Cancelar</a>
-                </form>
-
                 
+                <h2>Nuevo Movimiento</h2> </h2>
+
+                    <form method="POST" action="/new" id="new">
+
+                        <div>
+                            <label for="movement_type">Tipo de Movimiento</label>
+                            <select name="movement_type" id="movement_type">
+                                <option required disabled selected>Seleccionar</option>
+                                <option>Ingreso</option>
+                                <option>Egreso</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label for="date">Fecha</label>
+                            <input required type="date" name="date" id="date">
+                        </div>
+
+                        <div>
+                            <label for="amount">Monto ($)</label>
+                            <input required type="amount" name="amount" id="amount">
+                        </div>
+
+                        <div>
+                            <label for="concept">Concepto</label>
+                            <select required name="concept" id="concept">
+                                <option disabled selected>Seleccionar</option>
+                                <option>Sueldo</option>
+                                <option>Otro Ingreso</option>
+                                <option>Combustible</option>
+                                <option>Supermercado</option>
+                                <option>Pago de Servicios</option>
+                                <option>Pago de Tarjeta de Credito</option>
+                                <option>Otro</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label for="comment">Comentario</label>
+                            <textarea 
+                                name="comment"
+                                id="comment"
+                                cols="35"
+                                rows="1"
+                                maxlength="75"></textarea>
+                        </div>
+                        <button type="submit" class="btn">Ingresar</button>
+                        <a href="./resume" class="btn">Cancelar</a>
+                    </form>
+
+            
 
             </div>
         </div>        
