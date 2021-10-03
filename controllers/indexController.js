@@ -60,7 +60,12 @@ const indexController = {
       });
 
       return res.redirect("../resume");      
+    },
+
+    login: function (req, res) {
+      return res.render("login");
     }
+
   };
   
   module.exports = indexController;

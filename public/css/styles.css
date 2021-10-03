@@ -131,6 +131,19 @@ header .log p:hover {
     padding: .5rem 0;
 }
 
+.home .content h2 {
+    font-size: 3.5rem;
+    text-align: center;
+    color: black;
+    text-transform: uppercase;
+}
+
+.home .content h1 {
+    font-size: 2rem;
+    color: black;
+    text-transform: uppercase;
+}
+
 .error {
     text-align: center;
 }
@@ -225,6 +238,71 @@ td, th {
     padding: 5px;
 }
 
+.login-form-container {
+    width: 80%;
+    display: block;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-form-container form{
+    margin: 2rem;
+    padding: 1.5rem 2rem;
+    border-radius: .5rem;
+    background-color: bisque;
+    opacity: .9;
+    width: 50rem;
+}
+
+.login-form-container form h3{
+    font-size: 3rem;
+    color: #444;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 1rem 0;
+}
+
+.login-form-container .box{
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.7rem;
+    color: #333;
+    margin: .6rem 0;
+    border: .1rem solid rgba(0,0,0,.3); 
+}
+
+.login-form-container form .box:focus{
+    border-color: var(--orange);
+}
+
+.login-form-container form #remember{
+    margin: 2rem 0;
+}
+
+.login-form-container form label{
+    font-size: 1.5rem;
+}
+
+.login-form-container form .btn {
+    display: block;
+    width: 100%;
+}
+
+.login-form-container form h1{
+    color: var(--orange);
+}
+
+.login-form-container form h1 a:hover {
+    color: #333;
+    text-decoration: underline;
+}
+
+.login-form-container #form-close {
+    display: flex;
+    flex-direction: row-reverse;
+    cursor: pointer;
+}
+
 
 /* media queries */
 
@@ -241,6 +319,7 @@ td, th {
     header {
         padding: 2rem;
     }
+    
 
 }
 
@@ -251,6 +330,10 @@ td, th {
         text-align: center;
         padding: 1px;
         font-size: 1.5rem;
+    }
+
+    footer{
+        position: relative;
     }
 
 }
@@ -268,10 +351,6 @@ td, th {
 
     .home .content {
         margin-bottom: 100px;    
-    }
-
-    footer{
-        position: relative;
     }
 
     td, th {
