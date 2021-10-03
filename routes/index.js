@@ -12,7 +12,7 @@ router.post("/new", indexController.save); //FUNCIONA
 
 // edit movement
 router.get("/edit/:idMovement", indexController.edit);//FUNCIONA
-router.post("/edit/:idMovement", indexController.saveModification);
+router.put("/edit/:idMovement", indexController.saveModification);//FUNCIONA
 
 // delete movement
 router.get("/delete/:idMovement", indexController.delete);//FUNCIONA

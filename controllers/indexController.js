@@ -43,7 +43,7 @@ const indexController = {
         comment: req.body.comment,
       }, { where: {id_movement: req.params.idMovement}});
 
-      return res.redirect("resume");
+      return res.redirect("../resume");
 
     },
 
@@ -59,7 +59,7 @@ const indexController = {
         where: {id_movement: req.params.idMovement },
       });
 
-      return res.redirect("resume");      
+      return res.redirect("../resume");      
     }
   };
   
