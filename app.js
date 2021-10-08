@@ -29,9 +29,11 @@ app.use(express.urlencoded({ extended: false }));
 // routes
 const indexRouter = require("./routes/index");
 const apiRouter = require("./routes/apis");
+const usersRouter = require("./routes/users");
 
 app.use("/", indexRouter);
 app.use("/movements", apiRouter);
+app.use("/users", usersRouter);
 
 // page not found
 app.use((req, res, next) => {

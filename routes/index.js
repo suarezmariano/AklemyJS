@@ -20,7 +20,5 @@ router.put("/edit/:idMovement", indexController.saveModification);
 router.get("/delete/:idMovement", indexController.delete);
 router.delete("/delete/:idMovement", indexController.deleteMovement);
 
-// login
-router.get("/login", indexController.login);
 
 module.exports = router;

@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <%- include("./partials/head.ejs") %>
+    <%- include("../partials/head.ejs") %>
 
 <body>
 
-    <%- include("./partials/header.ejs") %>
+    <%- include("../partials/header.ejs") %>
             
     <section class="home" id="home">
 
@@ -14,12 +14,12 @@
             
             <div class="login-form-container">
 
-                <form action="">
+                <form method="POST" action="/users/login" id="login">
 
                     <h2>Login</h2>
-                    <input type="email" class="box" placeholder="Ingrese su correo electrónico">
-                    <input type="password" class="box" placeholder="Ingrese su contraseña">
-                    <input type="submit" value="Ingresar" class="btn">
+                    <input type="email" name="email" id="name" class="box" placeholder="Ingrese su correo electrónico">
+                    <input type="password" name="password" id="password" class="box" placeholder="Ingrese su contraseña">
+                    <button type="submit" class="btn">Ingresar</button>
                     <input type="checkbox" id="remember">
                     <label for="remember">Recordar Contraseña</label>
                     <h1>Olvidó su contraseña?<a href="#"> Resetear Contraseña</a></h1>
@@ -39,7 +39,7 @@
         </div> 
     </section>
 
-    <%- include("./partials/footer.ejs") %>
+    <%- include("../partials/footer.ejs") %>
 
 </body>
 </html>
