@@ -301,6 +301,10 @@ td, th {
     color: #333;
     text-decoration: underline;
 }
+.text-danger {
+    color: red;
+    font-size: 1.5rem;
+}
 
 
 /* media queries */

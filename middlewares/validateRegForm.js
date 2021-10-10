@@ -1,6 +1,10 @@
 const { body } = require("express-validator");
 
-const validateUser = [
+const validateRegForm = [
+    body("firstName")
+    .notEmpty().withMessage("* Debes completar este campo"),
+    body("lastName")
+    .notEmpty().withMessage("* Debes completar este campo"),
     body("email")
     .isEmail().withMessage("* Debes completar el Email con una dirección válida"),
     body("password")
@@ -8,4 +12,4 @@ const validateUser = [
       .isLength({ min: 4, max: 8 }).withMessage("* La contraseña debe tener entre 4 y 8 caracteres")    
   ];
 
-  module.exports = validateUser;
+  module.exports = validateRegForm;

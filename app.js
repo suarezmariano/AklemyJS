@@ -13,7 +13,7 @@ app.listen(app.get("port"), () => {
     console.log("Server Running on Port ", app.get("port"));
 });
 
-// public
+// public folder
 const publicFolderPath = path.resolve(__dirname,"./public");
 app.use(express.static(publicFolderPath));
 
@@ -23,8 +23,6 @@ app.set("view engine", "ejs");
 app.use(methodOverride("_method"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-
-
 
 // routes
 const indexRouter = require("./routes/index");

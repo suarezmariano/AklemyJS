@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <%- include("../partials/head.ejs") %>
+
+<body>
+
+    <%- include("../partials/header.ejs") %>
+            
+    <section class="home" id="home">
+
+        <div class="content">
+            <img src="/images/background.jpg">
+            
+            <div class="login-form-container">
+
+                <form method="POST" action="/users/register" id="register">
+
+                    <h2>Crear una cuenta</h2>
+                    
+                    <input type="text" name="firstName" id="firstName" class="box" placeholder="Ingrese su nombre" value="<%= locals.oldData ? oldData.firstName : null %>">
+                    <div class="text-danger" id="errorFirstName">
+                        <% if (locals.errors && errors.firstName) { %> <%=
+                        errors.firstName.msg %> <% } %>
+                    </div>
+
+                    <input type="text" name="lastName" id="lastName" class="box" placeholder="Ingrese su apellido" value="<%= locals.oldData ? oldData.lastName : null %>">
+                    <div class="text-danger" id="errorLastName">
+                        <% if (locals.errors && errors.lastName) { %> <%=
+                        errors.lastName.msg %> <% } %>
+                    </div>
+
+                    <input type="email" name="email" id="email" class="box" placeholder="Ingrese su correo electrónico" value="<%= locals.oldData ? oldData.email : null %>">
+                    <div class="text-danger" id="errorEmail">
+                        <% if (locals.errors && errors.email) { %> <%=
+                        errors.email.msg %> <% } %>
+                    </div>
+
+                    <input type="password" name="password" id="password" class="box" placeholder="Ingrese su contraseña">
+                    <div class="text-danger" id="errorPassword">
+                        <% if (locals.errors && errors.password) { %> <%=
+                        errors.password.msg %> <% } %>
+                    </div>
+
+                    <button type="submit" class="btn">Registarse</button>
+                    
+
+                </form>
+
+                <div>
+
+                    <a href="../" class="btn">Volver</a> 
+                    
+                </div>
+
+
+            </div>      
+
+        </div> 
+    </section>
+
+    <%- include("../partials/footer.ejs") %>
+
+</body>
+</html>
