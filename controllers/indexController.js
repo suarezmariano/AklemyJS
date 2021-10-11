@@ -60,14 +60,6 @@ const indexController = {
       });
 
       return res.redirect("../resume");      
-    },
-
-    login: function (req, res) {
-      return res.render("login");
-    },
-
-    register: function (req, res) {
-      return res.render(req.body);
     }
 
   };
