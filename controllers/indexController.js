@@ -24,7 +24,7 @@ const indexController = {
 
     list: function (req, res) {
       db.Movement.findAll().then((movements) => {
-        return res.render("./resume", { movements: movements });
+        return res.render("./resume", { movements: movements, order: [["date", "DESC"]], limit: 10 });
       });
     },
 

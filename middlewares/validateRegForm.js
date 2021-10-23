@@ -1,9 +1,9 @@
 const { body } = require("express-validator");
 
 const validateRegForm = [
-    body("firstName")
+    body("first_name")
     .notEmpty().withMessage("* Debes completar este campo"),
-    body("lastName")
+    body("last_name")
     .notEmpty().withMessage("* Debes completar este campo"),
     body("email")
     .isEmail().withMessage("* Debes completar el Email con una dirección válida"),

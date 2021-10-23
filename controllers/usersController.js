@@ -1,4 +1,6 @@
 const { validationResult } = require("express-validator");
+const bcryptjs = require("bcryptjs")
+const db = require("../database/models/index");
 
 const usersController = {
     login: function (req, res) {
@@ -21,6 +23,18 @@ const usersController = {
           errors: resultValidation.mapped(),
           oldData: req.body,
         });
+
+      } else {
+
+        db.User.create({
+          first_name: req.body.first_name,
+          last_name: req.body.last_name,
+          email: req.body.email,
+          password: bcryptjs.hashSync(req.body.password, 10),
+        });
+
+        return res.send("Usuario Creado");
+
       }
     },    
 

@@ -18,13 +18,13 @@
 
                     <h2>Crear una cuenta</h2>
                     
-                    <input type="text" name="firstName" id="firstName" class="box" placeholder="Ingrese su nombre" value="<%= locals.oldData ? oldData.firstName : null %>">
+                    <input type="text" name="first_name" id="first_name" class="box" placeholder="Ingrese su nombre" value="<%= locals.oldData ? oldData.firstName : null %>">
                     <div class="text-danger" id="errorFirstName">
                         <% if (locals.errors && errors.firstName) { %> <%=
                         errors.firstName.msg %> <% } %>
                     </div>
 
-                    <input type="text" name="lastName" id="lastName" class="box" placeholder="Ingrese su apellido" value="<%= locals.oldData ? oldData.lastName : null %>">
+                    <input type="text" name="last_name" id="last_name" class="box" placeholder="Ingrese su apellido" value="<%= locals.oldData ? oldData.lastName : null %>">
                     <div class="text-danger" id="errorLastName">
                         <% if (locals.errors && errors.lastName) { %> <%=
                         errors.lastName.msg %> <% } %>
