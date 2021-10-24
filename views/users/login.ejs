@@ -17,11 +17,18 @@
                 <form method="POST" action="/users/login" id="login">
 
                     <h2>Login</h2>
-                    <input type="email" name="email" id="name" class="box" placeholder="Ingrese su correo electrónico">
+
+                    <input type="email" name="email" id="name" class="box" placeholder="Ingrese su correo electrónico" value="<%= locals.oldData ? oldData.email : null %>">
                     <% if (locals.errors && errors.email){%>
                         <div class="text-danger"><%=errors.email.msg%></div>
                     <%}%>
+
                     <input type="password" name="password" id="password" class="box" placeholder="Ingrese su contraseña">
+                    <div class="text-danger" id="errorPassword">
+                        <% if (locals.errors && errors.password) { %> <%=
+                        errors.password.msg %> <% } %>
+                    </div>
+
                     <button type="submit" class="btn">Ingresar</button>
                     <input type="checkbox" id="remember">
                     <label for="remember">Recordar Contraseña</label>

@@ -3,20 +3,12 @@ const bcryptjs = require("bcryptjs")
 const db = require("../database/models/index");
 
 const usersController = {
-    login: function (req, res) {
-      return res.render("./users/login");
-    },
-
-    userLogged: function (req, res) {
-      
-    },
-
     register: function (req, res) {
       return res.render("./users/register");
     },
 
     registerProcess: function (req, res) {
-      const resultValidation = validationResult(req);
+      let resultValidation = validationResult(req);
       
       if (resultValidation.errors.length > 0) {
         return res.render("./users/register", { 
@@ -25,7 +17,6 @@ const usersController = {
         });
 
       } else {
-
         db.User.create({
           first_name: req.body.first_name,
           last_name: req.body.last_name,
@@ -42,8 +33,26 @@ const usersController = {
         });
 
       };
-
       
     },
+
+    login: function (req, res) {
+      return res.render("./users/login");
+    },
+
+    loginProcess: function (req, res) {
+      let resultValidation = validationResult(req);
+      
+      if (resultValidation.errors.length > 0) {
+        return res.render("./users/login", { 
+          errors: resultValidation.mapped(),
+          oldData: req.body,
+        });
+
+      } else {
+       
+
+      };
+    }
   }
   module.exports = usersController;
