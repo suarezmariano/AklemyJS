@@ -18,6 +18,9 @@
 
                     <h2>Login</h2>
                     <input type="email" name="email" id="name" class="box" placeholder="Ingrese su correo electrónico">
+                    <% if (locals.errors && errors.email){%>
+                        <div class="text-danger"><%=errors.email.msg%></div>
+                    <%}%>
                     <input type="password" name="password" id="password" class="box" placeholder="Ingrese su contraseña">
                     <button type="submit" class="btn">Ingresar</button>
                     <input type="checkbox" id="remember">

@@ -17,7 +17,7 @@ const usersController = {
 
     registerProcess: function (req, res) {
       const resultValidation = validationResult(req);
-
+      
       if (resultValidation.errors.length > 0) {
         return res.render("./users/register", { 
           errors: resultValidation.mapped(),
@@ -33,11 +33,17 @@ const usersController = {
           password: bcryptjs.hashSync(req.body.password, 10),
         });
 
-        return res.send("Usuario Creado");
+        return res.render("./users/login", {
+          errors: {
+            email: {
+              msg: "* Usuario creado correctamente, por favor logueate.",
+            },
+          },
+        });
 
-      }
-    },    
+      };
 
-  };
-  
+      
+    },
+  }
   module.exports = usersController;

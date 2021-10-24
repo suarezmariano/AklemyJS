@@ -9,18 +9,19 @@ module.exports = function (sequelize,dataTypes) {
             autoIncrement: true
         },
         first_name: {
-            allowNull: false,
+            
             type: dataTypes.STRING(45)
         },
         last_name: {
-            allowNull: false,
+            
             type: dataTypes.STRING(45)
         },
-        mail: {
+        email: {
+            
             type: dataTypes.STRING(45)
         },
         password: {
-            allowNull: false,
+            
             type: dataTypes.STRING(75)
         }
     }
